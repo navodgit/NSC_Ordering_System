@@ -8,3 +8,5 @@ class NSC(models.Model):
 class customer(models.Model):
   firstname = models.CharField(max_length=255)
   lastname = models.CharField(max_length=255)
+  customer_id =
+
