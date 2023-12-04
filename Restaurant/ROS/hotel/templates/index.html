@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 {% load mathfilters %}
 {% include "includes/landing_top.html" %}
 
@@ -28,8 +28,10 @@
 
 						<div class="col-md-6 agileits-special-info">
 							<a href="{% url 'hotel:food_details' f.id %}"><h4>{{f.name|truncatechars:11}}</h4></a>
-							<p>{{f.content_description|truncatechars:90}}</p>
-						</div>
+                            <p>{{ f.content_description|truncatechars:90 }}</p>
+                           <!-- Adding the price tag -->
+                        <p>Price: Rs.{{models.sale_price}}</p>
+                         </div>
 					</div>
 			{% endfor %}
 					<div class="clearfix"> </div>
@@ -50,7 +52,7 @@
 				</div>
 				<div class="col-md-8 features-right">
 					<div class="features-right-info">
-						<h4>The best restaurants in Manila keep with the cosmopolitan feel of this city, which blends a myriad of influences from all around the world, both in its history and its cuisine. Filipino food itself has already been shaped by aboriginal, Spanish, North American, Indonesian and Chinese cuisines, so you’re almost certain to find something to your taste in Manila.</h3>
+						<h4>The best restaurants in Manila keep with the cosmopolitan feel of this city, which blends a myriad of influences from all around the world, both in its history and its cuisine. Filipino food itself has already been shaped by aboriginal, Spanish, North American, Indonesian and Chinese cuisines, so you’re almost certain to find something to your taste in Manila.</h4>
 					</div>
 					<div class="features-right-grids">
 						<div class="features-right-left">
