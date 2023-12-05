@@ -33,12 +33,12 @@
 						<span class="quantity">{{item.quantity}}</span>
 						<span class="itemName">{{item.food.name}}</span>
                         <span class="popbtn"><a class="arrow" id="{{item.id}}"></a></span>
-                        <span class="price">₱ {{ item.food.sale_price|mul:item.quantity }}</span>
+                        <span class="price">LKR{{ item.food.sale_price|mul:item.quantity }}</span>
                     </li>
                     {% endfor %}
                     <li class="row totals">
 						<span class="itemName">Total:</span>
-						<span class="price">₱ {{total}}</span>
+						<span class="price"> LKR{{total}}</span>
 						<span class="order"> <a class="text-center" href="{% url 'hotel:placeOrder' %}">ORDER</a></span>
 						<span class="order"> <a class="text-center" href="{% url 'hotel:menu' %}">Continue Shopping</a></span>
 					</li>
