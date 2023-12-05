@@ -93,11 +93,11 @@ class Order(models.Model):
         return self.customer.__str__()
 
 class Food(models.Model):
-    indian = 'Negros Best Food'
-    south = 'Manila Best Food'
-    gujarati = 'Sea Food'
-    punjabi = 'Iloilo Best Food'
-    fast = 'Aklan Food'
+    indian = 'Indian Food'
+    south = 'Sea Food'
+    gujarati = 'Sri Lankan Food'
+    punjabi = 'Chinese Food'
+    fast = 'Fast Food'
     
     COURSE = (
         (indian,indian),
